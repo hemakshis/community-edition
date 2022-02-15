@@ -56,9 +56,9 @@ vsphereCPI:
     #@schema/desc "The NSX-T server"
     #@schema/nullable
     host: ""
-    #@schema/desc "(Deprecated. For backward compatibiility. Will be replaced by insecure. If both set, insecure has higher priority). InsecureFlag is to be set to true if NSX-T uses self-signed cert"
+    #@schema/desc "(Deprecated. For backward compatibiility. Will be replaced by insecure. If both set, result is insecureFlag || insecure) InsecureFlag is to be set to true if NSX-T uses self-signed cert"
     insecureFlag: "false"
-    #@schema/desc "(Deprecated. For backward compatibiility. Will be replaced by removeAuthEnabled. If both set, removeAuthEnabled has higher priority). RemoteAuth is to be set to true if NSX-T uses remote authentication (authentication done through the vIDM)"
+    #@schema/desc "(Deprecated. For backward compatibiility. Will be replaced by removeAuthEnabled. If both set, result is remoteAuth || remoteAuthEnabled). RemoteAuth is to be set to true if NSX-T uses remote authentication (authentication done through the vIDM)"
     remoteAuth: "false"
     #@schema/desc "Insecure is to be set to true if NSX-T uses self-signed cert"
     insecure: false

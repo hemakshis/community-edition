@@ -137,11 +137,11 @@ spec:
                 insecureFlag:
                   type: string
                   default: "false"
-                  description: (Deprecated. For backward compatibiility. Will be replaced by insecure. If both set, insecure has higher priority). InsecureFlag is to be set to true if NSX-T uses self-signed cert
+                  description: (Deprecated. For backward compatibiility. Will be replaced by insecure. If both set, result is insecureFlag || insecure) InsecureFlag is to be set to true if NSX-T uses self-signed cert
                 remoteAuth:
                   type: string
                   default: "false"
-                  description: (Deprecated. For backward compatibiility. Will be replaced by removeAuthEnabled. If both set, removeAuthEnabled has higher priority). RemoteAuth is to be set to true if NSX-T uses remote authentication (authentication done through the vIDM)
+                  description: (Deprecated. For backward compatibiility. Will be replaced by removeAuthEnabled. If both set, result is remoteAuth || remoteAuthEnabled). RemoteAuth is to be set to true if NSX-T uses remote authentication (authentication done through the vIDM)
                 insecure:
                   type: boolean
                   default: false
