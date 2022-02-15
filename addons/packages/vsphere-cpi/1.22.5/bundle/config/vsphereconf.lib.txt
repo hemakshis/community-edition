@@ -47,12 +47,12 @@ exclude-external-network-subnet-cidr = "(@=values.vsphereCPI.vmExcludeExternalNe
 router-path = "(@=values.vsphereCPI.nsxt.routes.routerPath @)"
 [NSXT]
 host = "(@=values.vsphereCPI.nsxt.host @)"
-(@ if values.vsphereCPI.nsxt.insecureFlag: -@)
+(@ if values.vsphereCPI.nsxt.insecure or str(values.vsphereCPI.nsxt.insecureFlag).lower() == "false" : -@)
 insecure-flag = true
 (@ else: -@)
 insecure-flag = false
 (@ end -@)
-(@ if values.vsphereCPI.nsxt.remoteAuth: -@)
+(@ if values.vsphereCPI.nsxt.remoteAuthEnabled or str(values.vsphereCPI.nsxt.remoteAuth).lower() == "false": -@)
 remote-auth = true
 (@ else: -@)
 remote-auth = false
